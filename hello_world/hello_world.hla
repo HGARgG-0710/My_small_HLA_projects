@@ -1,0 +1,32 @@
+program HelloWorld;
+
+#include ("stdlib.hhf")
+
+static
+         int8_max: int8 := 127;
+         int8_min: int8 := -128;
+         my_int_0: int16 := -18000; 
+         user_int: int32;
+
+         IsProgrammingCool: boolean := true;
+         my_favourite_mark: char := 'A';
+
+begin HelloWorld;
+
+         stdout.put("Hello, World!", nl);
+         stdout.put(
+               "Here are all the values of all the signed integer", 
+               " variables in the program: ",
+               int8_max, ", ", 
+               int8_min, ", ", 
+               my_int_0, ", ", 
+               IsProgrammingCool, ", ",
+               my_favourite_mark, ".",
+
+               nl, nl,
+               "Now enter your own integer: "
+               );
+         stdin.get(user_int);
+         stdout.put("You've entered: ", user_int, nl)
+
+end HelloWorld;
